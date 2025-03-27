@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h2>Your Bag</h2>
+    <div *ngFor="let item of cartItems; let i = index">
+        <p>{{ item.name }} - {{ item.quantity }} x ${{ item.price }}</p>
+        <button (click)="removeItem(i)" class="btn btn-danger btn-sm">Remove</button>
+    </div>
+    <hr>
+    <p><strong>Total:</strong> ${{ getTotal() }}</p>
+    <a routerLink="/checkout" class="btn btn-success">Checkout</a>
+</div>
