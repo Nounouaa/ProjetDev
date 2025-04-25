@@ -8,11 +8,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SelectProduitComponent } from './select-produit/select-produit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SelectProduitComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     ProductComponent,
     CartComponent,
-    CheckoutComponent
+    FormsModule
   ],
   providers: [
   ],

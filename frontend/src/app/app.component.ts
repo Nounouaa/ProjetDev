@@ -14,9 +14,9 @@ export class AppComponent implements OnInit {
   constructor(private apiService : ApiService){}
 
   ngOnInit(): void {
-    this.apiService.getTest().subscribe(data => {
-      this.message = data.message; // Adaptez selon la structure de la réponse API
-    });
+    // this.apiService.getTest().subscribe(data => {
+    //   this.message = data.message; // Adaptez selon la structure de la réponse API
+    // });
     
   }
 } 

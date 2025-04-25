@@ -11,22 +11,45 @@ import { CommonModule } from '@angular/common';
   standalone : true,
   imports : [CommonModule]
 })
-export class CartComponent implements OnInit {
-  cartItems: CartItem[] = []; // Spécifiez le type explicite
+export class CartComponent {
+  cartItems = [
+    {
+      name: 'Nike',
+      description: 'Nike Air Force Premium',
+      price: 98.23,
+      quantity: 1,
+      image: 'https://source.unsplash.com/100x100/?nike'
+    },
+    {
+      name: 'Adidas',
+      description: 'DAILY 3.0 SHOES',
+      price: 98.23,
+      quantity: 1,
+      image: 'https://source.unsplash.com/100x100/?adidas'
+    }
+  ];
 
-  constructor(private cartService: CartService) {}
+  shipping = 20.00;
+  tax = 6.00;
+  discount = -6.00;
 
-  ngOnInit() {
-    // Initialiser cartItems après l'injection du service
-    this.cartItems = this.cartService.getItems();
+  get subtotal() {
+    return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   }
 
-  removeItem(index: number) {
-    this.cartService.removeItem(index);
-    this.cartItems = this.cartService.getItems(); // Mettre à jour les éléments après la suppression
+  get total() {
+    return this.subtotal + this.shipping + this.tax + this.discount;
   }
 
-  getTotal() {
-    return this.cartService.getTotal();
+  increment(item: any) {
+    item.quantity++;
+  }
+
+  decrement(item: any) {
+    if (item.quantity > 1) item.quantity--;
+  }
+
+  removeItem(item: any) {
+    this.cartItems = this.cartItems.filter(i => i !== item);
   }
 }

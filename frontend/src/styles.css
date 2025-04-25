@@ -1,3 +1,8 @@
+.body {
+    background-color: rgb(182, 33, 33);
+    /* Blanc pur */
+}
+
 .navbar {
     background-color: #ffffff;
     border: 1px solid #e9dcd2;
@@ -154,4 +159,253 @@
     top: 24px;
     left: 566px;
     opacity: 55%;
+}
+
+.product-page {
+    .row {
+        margin-bottom: 20px;
+    }
+    .photo-card,
+    .product-info-card,
+    .description-card,
+    .product-photo-card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .photo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+    }
+    .photo-controls {
+        text-align: center;
+        margin-top: 10px;
+        button {
+            margin: 0 10px;
+        }
+    }
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+    }
+    .product-info-card {
+        .price {
+            font-size: 1.5em;
+            color: #ff5733;
+            margin: 10px 0;
+        }
+    }
+    .description-card {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 150px;
+        overflow-y: scroll;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card2-img-top {
+    width: 200%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.position-absolute {
+    z-index: 10;
+}
+
+.btn-outline-dark {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.image-indicator span {
+    display: inline-block;
+    width: 12px;
+    /* Taille des points */
+    height: 12px;
+    /* Taille des points */
+    background-color: #ccc;
+    /* Couleur des points inactifs */
+    border-radius: 50%;
+    /* Rendre les points circulaires */
+    margin: 0 5px;
+    /* Espacement entre les points */
+}
+
+.image-indicator span.active {
+    background-color: rgba(32, 27, 33, 1);
+    /* Couleur du point actif */
+}
+
+button.btn-outline-dark {
+    border: none;
+    /* Supprimer la bordure */
+    box-shadow: none;
+    /* Supprimer l'ombre de la bordure */
+}
+
+button.btn-outline-dark:focus {
+    outline: none;
+    /* Supprimer le focus (contour bleu lorsque le bouton est sélectionné) */
+}
+
+.rounded-custom {
+    border-radius: 20px;
+    /* Modifiez la valeur selon le besoin */
+}
+
+.custom-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(32, 27, 33, 1);
+}
+
+.custom-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: rgba(103, 105, 110, 1);
+    /* Couleur de texte */
+}
+
+.custom-price {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(32, 27, 33, 1);
+}
+
+.custom-quantity-text {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(32, 27, 33, 1);
+}
+
+.card3 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+}
+
+.custom-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: rgba(103, 105, 110, 1);
+}
+
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.cart-left {
+    flex: 2;
+}
+
+.cart-summary {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
+    height: fit-content;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+.quantity button {
+    padding: 0 10px;
+    margin: 0 5px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.discount span:last-child {
+    color: orange;
+}
+
+.total {
+    font-size: 1.2rem;
+}
+
+.checkout-btn {
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
 }
