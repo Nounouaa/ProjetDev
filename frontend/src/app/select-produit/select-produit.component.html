@@ -26,38 +26,38 @@
         </div>
 
         <!-- Colonne des détails du produit -->
-        <div class="col-md-5">
-            <div class="card3 p-4 rounded-custom" style="background-color: #f8f9fa;">
-                <!-- Détails du produit -->
-                <h5 class="card2-title">{{ product.title }}</h5>
-                <p class="card2-text">{{ product.description }}</p>
-                <h6 class="card2-price">Prix : {{ product.price | currency:'EUR' }}</h6>
+        <div class="cart-summary">
 
-                <!-- Trait horizontal sous le prix -->
-                <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-top: 30px;width: 490px;"></div>
+            <!-- Détails du produit -->
+            <h5 class="card2-title">{{ product.title }}</h5>
+            <p class="card2-text">{{ product.description }}</p>
+            <h6 class="card2-price">Prix : {{ product.price | currency:'EUR' }}</h6>
 
-                <!-- Sélection de la quantité -->
-                <div class="form-group mt-4">
-                    <label class="me-2 custom-quantity-text">Quantité :</label>
-                    <div class="input-group mt-3" style="width: 150px; height: 60px; border-radius: 10px; border: 1px solid black; background-color: #fff;">
-                        <!-- Bouton - -->
-                        <button class="btn btn-outline-secondary btn-sm rounded-custom" (click)="changeQuantity(i, -1)" type="button" style="border: none; padding: 0.5rem; background: none; font-size: 24px; display: flex; align-items: center;">
+            <!-- Trait horizontal sous le prix -->
+            <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-top: 30px;width: 490px;"></div>
+
+            <!-- Sélection de la quantité -->
+            <div class="form-group mt-4">
+                <label class="me-2 custom-quantity-text">Quantité :</label>
+                <div class="input-group mt-3" style="width: 150px; height: 60px; border-radius: 10px; border: 1px solid rgb(224, 216, 216); background-color: #fff;">
+                    <!-- Bouton - -->
+                    <button class="btn btn-outline-secondary btn-sm rounded-custom" (click)="changeQuantity(i, -1)" type="button" style="border: none; padding: 0.5rem; background: none; font-size: 24px; display: flex; align-items: center;">
                             <i class="bi bi-dash"></i> <!-- Icône "-" -->
                         </button>
 
-                        <!-- Champ de quantité -->
-                        <input type="number" [(ngModel)]="product.quantity" class="form-control text-center rounded-custom" min="1" style="width: 50px; padding: 0.5rem; text-align: center; border: none; font-size: 18px; background-color: #f8f9fa;">
+                    <!-- Champ de quantité -->
+                    <input type="number" [(ngModel)]="product.quantity" class="form-control text-center rounded-custom" min="1" style="width: 50px; padding: 0.5rem; text-align: center; border: none; font-size: 18px; background-color: #ffffff;">
 
-                        <!-- Bouton + -->
-                        <button class="btn btn-outline-secondary btn-sm rounded-custom" (click)="changeQuantity(i, 1)" type="button" style="border: none; padding: 0.5rem; background: none; font-size: 24px; display: flex; align-items: center;">
+                    <!-- Bouton + -->
+                    <button class="btn btn-outline-secondary btn-sm rounded-custom" (click)="changeQuantity(i, 1)" type="button" style="border: none; padding: 0.5rem; background: none; font-size: 24px; display: flex; align-items: center;">
                             <i class="bi bi-plus"></i> <!-- Icône "+" -->
                         </button>
-                    </div>
                 </div>
+            </div>
 
-                <!-- Bouton d'ajout au panier -->
-                <div class="d-flex justify-content-center mt-4">
-                    <button class="btn" (click)="addToCart(product)" style="
+            <!-- Bouton d'ajout au panier -->
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn" (click)="addToCart(product)" style="
                         background-color: rgba(32, 27, 33, 1);
                         color: rgba(255, 255, 255, 1);
                         width: 456px;
@@ -77,8 +77,8 @@
                         vertical-align: middle;">
                         Add to Cart
                     </button>
-                </div>
             </div>
+
         </div>
     </div>
 </div>

@@ -18,14 +18,14 @@ export class CartComponent {
       description: 'Nike Air Force Premium',
       price: 98.23,
       quantity: 1,
-      image: 'https://source.unsplash.com/100x100/?nike'
+      image: 'assets/img/rect3.png'
     },
     {
       name: 'Adidas',
       description: 'DAILY 3.0 SHOES',
       price: 98.23,
       quantity: 1,
-      image: 'https://source.unsplash.com/100x100/?adidas'
+      image: 'assets/img/rect2.png'
     }
   ];
 
