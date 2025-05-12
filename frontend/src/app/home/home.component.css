@@ -1,0 +1,403 @@
+.card {
+    position: relative;
+    border: none;
+    overflow: hidden;
+    height: 100px;
+}
+
+.card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    /* Assombrit l'image pour lisibilité du texte */
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent */
+    text-align: center;
+}
+
+.hero-card {
+    left: auto;
+    right: 1.5%;
+    padding: 1%;
+    padding-top: 1%;
+    margin-top: 4%;
+}
+
+.hero-card img {
+    object-fit: cover;
+    width: 600px;
+    height: 490px;
+    position: absolute;
+    top: -70px;
+    left: 500px;
+    transform: rotate(-20deg);
+}
+
+.sale-title {
+    color: #EC5E2A !important;
+    /* Couleur orange */
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1px;
+}
+
+.card .btn {
+    position: absolute;
+    width: 283px;
+    height: 64px;
+    top: 299px;
+    left: 64px;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    gap: 10px;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    border: none;
+    display: inline-flex;
+    /* Alignement horizontal */
+    align-items: center;
+    /* Aligne le texte et l'icône verticalement */
+    justify-content: center;
+    /* Centre le contenu horizontalement */
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #5b8e9b;
+}
+
+.card .arrow-icon {
+    font-size: 33px;
+    margin-left: 2%;
+    margin: 1%;
+    margin-right: 2%;
+    /* Espace entre le texte et l'icône */
+}
+
+.card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 73px;
+    letter-spacing: -1px;
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: rgba(103, 105, 110, 1);
+}
+
+.text {
+    margin-top: 5%;
+    font-size: 38px;
+}
+
+.image-row-wrapper {
+    display: none !important;
+}
+
+.left-btn {
+    display: none;
+}
+
+.right-btn {
+    display: none;
+}
+
+
+/* Responsive pour les petits écrans */
+
+@media screen and (max-width: 600px) {
+    #cardDesktop {
+        display: none;
+    }
+    #imP {
+        display: none;
+    }
+    .left-btn {
+        display: block;
+    }
+    .right-btn {
+        display: block;
+    }
+    #ctn {
+        width: 350px;
+        height: 449px;
+        top: 84px;
+        left: 20px;
+        padding-left: 15px;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        /* nécessaire pour que top/left s'appliquent */
+    }
+    #img {
+        position: relative;
+        /* annule absolute pour mobile */
+        width: 200px;
+        /* prend toute la largeur du conteneur */
+        height: auto;
+        /* conserve le ratio */
+        transform: rotate(-25deg);
+        top: -16px;
+        /* annule top/left si nécessaire */
+        left: -10%;
+        margin: 0 auto;
+        /* centrer l’image horizontalement */
+        display: block;
+    }
+    .sale-title {
+        color: #EC5E2A !important;
+        /* Couleur orange */
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+    .card-title {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 54.75px;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+    .card-text {
+        margin-top: 5%;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: rgba(103, 105, 110, 1);
+        text-align: center;
+    }
+    .btn {
+        margin-top: 5%;
+        width: 302px;
+        height: 48px;
+        border-radius: 10px;
+        padding-top: 12px;
+        padding-right: 80px;
+        padding-bottom: 12px;
+        padding-left: 80px;
+        gap: 10px;
+        background-color: rgba(32, 27, 33, 1);
+        color: white;
+        font-weight: 500;
+        border: none;
+        display: inline-flex;
+        /* Alignement horizontal */
+        align-items: center;
+        /* Aligne le texte et l'icône verticalement */
+        justify-content: center;
+        /* Centre le contenu horizontalement */
+        transition: background-color 0.3s ease;
+    }
+    .text {
+        font: DM Sans;
+        margin-top: 13%;
+        font-size: 28px;
+    }
+    .image-scroll-container {
+        gap: 10px;
+    }
+    .image-row-wrapper {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        width: 100%;
+        /* ou 100% selon tes besoins */
+    }
+    .image-row {
+        display: flex;
+        gap: 20px;
+    }
+    .image-row img {
+        width: 180px;
+        /* taille ajustable */
+        height: auto;
+        flex-shrink: 0;
+    }
+    .scroll-btn {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .left-btn {
+        left: 5px;
+    }
+    .right-btn {
+        right: 5px;
+    }
+    .image-row-wrapper {
+        display: block !important;
+    }
+    .scroll-buttons {
+        display: flex;
+        flex-direction: row;
+        /* Alignement horizontal */
+        gap: 10px;
+        margin-top: 10px;
+        /* Espace au-dessus des boutons */
+        margin-left: 10px;
+        /* Aligné à gauche */
+        align-items: center;
+    }
+    .scroll-btn {
+        background-color: #fdfafa;
+        /* Couleur de fond */
+        color: rgb(0, 0, 0);
+        /* Couleur du texte */
+        /* Bordure gris clair */
+        padding: 15px;
+        cursor: pointer;
+        font-size: 30px;
+        /* Taille de l'icône */
+        border-radius: 50%;
+        /* Bord arrondi pour forme circulaire */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Animation sur survol */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        /* Largeur du bouton */
+        height: 70px;
+        /* Hauteur du bouton */
+        text-align: center;
+    }
+    .scroll-btn:hover {
+        background-color: #8f9fb1;
+        /* Couleur de fond au survol */
+        transform: scale(1.1);
+        /* Légère augmentation de taille au survol */
+    }
+    .scroll-btn:active {
+        background-color: #405061;
+        /* Couleur de fond au clic */
+        transform: scale(0.95);
+        /* Réduction de taille au clic */
+    }
+    /* Icône */
+    .scroll-btn i {
+        font-size: 30px;
+        /* Taille de l'icône */
+        color: #333;
+        /* Couleur de l'icône */
+    }
+    /* Ajout d'ombre pour donner un effet de profondeur */
+    .scroll-btn:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #titreP {
+        padding-top: 5%;
+        font: DM Sans;
+        font-weight: 700;
+        font-size: 16px;
+        Line-height: 18px;
+        Letter-spacing: -0.5px;
+        vertical-align: middle;
+        color: rgba(32, 27, 33, 1);
+    }
+    #descript {
+        font: Inter;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: rgba(103, 105, 110, 1);
+    }
+    #prix {
+        font: DM Sans;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #titreP {
+        font: DM Sans;
+        font-weight: 700;
+        font-size: 20px;
+        Line-height: 24px;
+        Letter-spacing: -0.5px;
+        vertical-align: middle;
+        color: rgba(32, 27, 33, 1);
+    }
+    #descript {
+        font: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: rgba(103, 105, 110, 1);
+    }
+    #prix {
+        font: DM Sans;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        vertical-align: middle;
+        color: rgba(32, 27, 33, 1);
+    }
+    #imP.product-row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        /* Espace entre les produits */
+        overflow-x: auto;
+        /* Ajoute un scroll horizontal si nécessaire */
+        padding: 10px;
+    }
+    .product-item {
+        min-width: 250px;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: white;
+        flex-shrink: 0;
+    }
+    .product-info {
+        margin-top: 10px;
+    }
+    .price {
+        font-weight: bold;
+        color: #007bff;
+    }
+    #ctn {
+        display: none;
+    }
+    #cardDesktop {
+        display: block;
+    }
+}

@@ -1,0 +1,128 @@
+/* Responsive pour petits écrans ≤ 391px */
+
+.title-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(32, 27, 33, 1);
+}
+
+.item-description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.action-row {
+    display: flex;
+    padding-left: 12px;
+    align-items: center;
+    width: 30%;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remove-link {
+    margin-left: auto;
+    color: red;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+@media (max-width: 391px) {
+    .title-price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .item-price {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(32, 27, 33, 1);
+    }
+    .item-description {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #333;
+    }
+    .cart-container {
+        flex-direction: column-reverse;
+        padding: 10px;
+        margin-right: 0%;
+    }
+    .cart-summary {
+        margin-left: 0%;
+        margin-bottom: 20px;
+    }
+    .quantity {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .action-row {
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: flex-start;
+        /* Align to the left */
+    }
+    .remove-link {
+        color: rgb(0, 14, 14);
+        margin-left: 0;
+        /* Reset margin for small screens */
+        margin-top: 6px;
+        /* Add a bit of spacing */
+    }
+    #summ {
+        font: DM Sans;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1px;
+        color: rgba(32, 27, 33, 1);
+    }
+    .summary-line {
+        font: DM Sans;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.38px;
+        vertical-align: middle;
+        color: rgba(32, 27, 33, 1);
+    }
+    #tot {
+        font: DM Sans;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.38ps;
+        vertical-align: middle;
+    }
+    #ba {
+        font: DM Sans;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 39px;
+        letter-spacing: -1px;
+    }
+}

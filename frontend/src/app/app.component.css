@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+    #footerDesktop {
+        display: none;
+    }
+    #footerMobile {
+        display: block;
+    }
+    #iconF {
+        margin-left: 65%;
+    }
+    .texte1 {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #footerDesktop {
+        display: block;
+    }
+    #footerMobile {
+        display: none;
+    }
+}

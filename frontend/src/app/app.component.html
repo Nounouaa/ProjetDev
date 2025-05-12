@@ -30,17 +30,44 @@
             <!-- Bouton View Cart avec icône panier, cadre sans fond -->
             <a routerLink="/cart" class="btn d-flex align-items-center border-1 rounded-3 px-4 py-2" style="font-size: 16px; font-weight: 620; border-color: rgba(32, 27, 33, 1); background-color: white; color: rgb(32, 27, 33);">
                 <!-- Icône de panier dans le bouton -->
-                <img src="assets/img/icon-panier.png" alt="Cart Icon" style="width: 20px; height: 20px; margin-right: 8px;"> View Cart
+                <img src="assets/img/icon-panier.png" alt="Cart Icon" style="width: 20px; height: 20px; margin-right: 8px;" id="view"> View Cart
             </a>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container min-vh-100">
         <router-outlet></router-outlet>
     </div>
 </body>
-<footer class="footer mt-10" style="margin-top: 150px;">
-    <div class="container">
+<footer class="footer" style="margin-top: 100px;">
+    <div class="container" id="footerMobile">
+
+        <div class="d-flex justify-content-between w-100">
+            <div>
+                <a routerLink="#" class=" d-flex align-items-center" style="font-size: 16px; font-weight: bold ; color: aliceblue; text-decoration: none;">
+                    <img src="assets/img/Vector@2x.png" alt="Emprunt Icon" style="width: 24px; height: 24px; margin-right: 8px;"> SUN CO.
+                </a>
+
+            </div>
+
+            <div class="d-flex justify-content-end gap-3">
+                <img src="assets/img/Instagram.png" alt="Instagram" class="img-card-top" style="width: 24px; height: 24px;">
+                <img src="assets/img/Twitter.png" alt="Twitter" class="img-card-top" style="width: 24px; height: 24px;">
+                <img src="assets/img/Path.png" alt="Autre" class="img-card-top" style="width: 24px; height: 24px;">
+            </div>
+
+        </div>
+        <p class="texte1">© 2023 dot.cards text task.
+            <br> All rights reserved
+        </p>
+
+
+
+    </div>
+
+
+
+    <div class="container" id="footerDesktop">
         <div class="row">
             <div class="col-md-4">
                 <a routerLink="#" class=" d-flex align-items-center" style="font-size: 16px; font-weight: bold ; color: aliceblue; text-decoration: none;">

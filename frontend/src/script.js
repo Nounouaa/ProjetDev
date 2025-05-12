@@ -1,29 +1,47 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Sélection des éléments
     const quantityInput = document.getElementById("quantity");
     const decreaseBtn = document.getElementById("decrease");
     const increaseBtn = document.getElementById("increase");
     const nextProductBtn = document.getElementById("nextProduct");
-    const productCarousel = new bootstrap.Carousel(document.getElementById("productCarousel"));
+    const carouselElement = document.getElementById("productCarousel");
+    const productCarousel = carouselElement ? new bootstrap.Carousel(carouselElement) : null;
 
-    // Gestion des boutons + et -
-    decreaseBtn.addEventListener("click", function() {
-        let currentValue = parseInt(quantityInput.value);
-        if (currentValue > 1) {
-            quantityInput.value = currentValue - 1;
+    const rowWrapper = document.querySelector('.image-row-wrapper');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
 
+    // Scroll buttons
+    if (leftBtn && rightBtn && rowWrapper) {
+        leftBtn.addEventListener('click', () => {
+            rowWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+        });
 
+        rightBtn.addEventListener('click', () => {
+            rowWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    }
 
-        }
-    });
+    // Quantity buttons
+    if (decreaseBtn && quantityInput) {
+        decreaseBtn.addEventListener("click", function() {
+            let currentValue = parseInt(quantityInput.value) || 1;
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+    }
 
-    increaseBtn.addEventListener("click", function() {
-        let currentValue = parseInt(quantityInput.value);
-        quantityInput.value = currentValue + 1;
-    });
+    if (increaseBtn && quantityInput) {
+        increaseBtn.addEventListener("click", function() {
+            let currentValue = parseInt(quantityInput.value) || 1;
+            quantityInput.value = currentValue + 1;
+        });
+    }
 
-    // Bouton "Next Product" pour défiler les images
-    nextProductBtn.addEventListener("click", function() {
-        productCarousel.next();
-    });
+    // Next carousel item
+    if (nextProductBtn && productCarousel) {
+        nextProductBtn.addEventListener("click", function() {
+            productCarousel.next();
+        });
+    }
 });
