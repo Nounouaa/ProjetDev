@@ -128,7 +128,7 @@
 
 /* Responsive pour les petits écrans */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     #cardDesktop {
         display: none;
     }
@@ -344,7 +344,7 @@
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 768px) {
     #titreP {
         font: DM Sans;
         font-weight: 700;

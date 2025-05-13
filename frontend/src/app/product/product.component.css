@@ -1,0 +1,176 @@
+.card2-img-top {
+    width: 200%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.image-indicator span {
+    display: inline-block;
+    width: 12px;
+    /* Taille des points */
+    height: 12px;
+    /* Taille des points */
+    background-color: #ccc;
+    /* Couleur des points inactifs */
+    border-radius: 50%;
+    /* Rendre les points circulaires */
+    margin: 0 5px;
+    /* Espacement entre les points */
+}
+
+.image-indicator span.active {
+    background-color: rgba(32, 27, 33, 1);
+    /* Couleur du point actif */
+}
+
+@media (max-width: 767px) {
+    /* Contrôle de l'espacement entre les boutons de navigation */
+    .scroll-controls {
+        gap: 40px;
+        /* Réduit l'espace entre les boutons de navigation */
+    }
+    /* Styles pour les boutons de navigation */
+    .scroll-controls button {
+        width: 36px;
+        /* Taille du bouton */
+        height: 36px;
+        /* Taille du bouton */
+        font-size: 14px;
+        /* Taille de la police */
+    }
+    /* Styles pour l'indicateur de l'image */
+    .image-indicator span {
+        width: 12px;
+        /* Taille des points */
+        height: 12px;
+        /* Taille des points */
+        background-color: #cecece;
+        /* Couleur des points inactifs */
+        border-radius: 50%;
+        /* Rend les points circulaires */
+        margin: 0 -17px;
+        /* Espacement entre les points */
+        display: inline-block;
+    }
+    /* Point actif (plus foncé) */
+    .image-indicator span.active {
+        background-color: #333;
+        /* Couleur des points actifs */
+    }
+    /* Styles pour les boutons en position absolue */
+    .btn.position-absolute {
+        width: 36px;
+        /* Taille du bouton */
+        height: 36px;
+        /* Taille du bouton */
+        font-size: 12px;
+        /* Taille de la police */
+    }
+    /* Styles pour les éléments arrondis */
+    .rounded-circle {
+        width: 8px;
+        /* Taille des éléments arrondis */
+        height: 8px;
+        /* Taille des éléments arrondis */
+    }
+    /* Styles pour la carte */
+    .card2 {
+        margin-left: 3%;
+        /* Espacement à gauche */
+        width: 100%;
+        /* Largeur complète */
+    }
+    /* Style de l'image de la carte */
+    .card2-img-top {
+        width: 200%;
+        /* Largeur de l'image */
+        max-height: 300px;
+        /* Hauteur maximale de l'image */
+        object-fit: cover;
+        /* Couvre la zone sans déformation */
+    }
+    /* Styles pour le résumé du panier */
+    .cart-summary {
+        padding: 1px;
+        /* Espacement interne */
+        margin-top: 5%;
+        /* Marge en haut */
+        margin-left: 0%;
+        /* Marge à gauche */
+    }
+    /* Styles pour le titre et le prix dans le résumé du panier */
+    .cart-summary h5.card2-title,
+    .cart-summary h6.card2-price {
+        margin-top: 5%;
+        /* Marge en haut */
+        display: inline-block;
+        /* Affichage en ligne */
+        width: 49%;
+        /* Largeur des éléments */
+        margin-bottom: 10px;
+        /* Marge en bas */
+        font-size: 18px;
+        /* Taille de la police */
+    }
+    /* Alignement du titre */
+    .cart-summary h5.card2-title {
+        text-align: left;
+        /* Aligné à gauche */
+    }
+    /* Alignement du prix */
+    .cart-summary h6.card2-price {
+        margin-top: 0%;
+        /* Supprime la marge du haut */
+        text-align: left;
+        /* Aligné à gauche */
+    }
+    /* Styles pour la description dans le résumé du panier */
+    .cart-summary p.card2-text {
+        font-size: 14px;
+        /* Taille de la police */
+        margin-top: 10px;
+        /* Marge en haut */
+        color: #555;
+        /* Couleur du texte */
+    }
+    /* Styles pour les groupes d'entrée */
+    .input-group {
+        width: 100% !important;
+        /* Largeur complète */
+    }
+    /* Styles pour les boutons d'ajout au panier */
+    .btn.add-to-cart {
+        width: 100% !important;
+        /* Largeur complète */
+    }
+    /* Style de l'image de la carte */
+    .card2-img-top {
+        max-width: 100%;
+        /* Largeur maximale de l'image */
+        height: auto;
+        /* Hauteur automatique */
+    }
+    /* Flex-direction pour inverser l'ordre des éléments sur mobile */
+    .row.flex-reverse-mobile {
+        flex-direction: column-reverse;
+        /* Inverse l'ordre des éléments */
+    }
+    /* Styles pour les textes personnalisés et la liste de remarques */
+    .custom-text,
+    .remark-list {
+        font-size: 14px;
+        /* Taille de la police */
+    }
+    /* Marge à gauche pour la liste des remarques */
+    .remark-list {
+        padding-left: 20px;
+        /* Espacement à gauche */
+    }
+    /* Taille des points dans la liste de remarques */
+    .dot {
+        width: 6px;
+        /* Taille du point */
+        height: 6px;
+        /* Taille du point */
+    }
+}

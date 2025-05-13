@@ -7,7 +7,7 @@
                 <img [src]="product.images[product.currentImageIndex]" alt="Product Image" class="card2-img-top img-fluid rounded-custom">
 
                 <!-- Boutons de navigation en bas de l'image -->
-                <div class="mt-3 d-flex justify-content-center align-items-center" style="gap: 200px;">
+                <div class="mt-2 d-flex justify-content-center align-items-center" style="gap: 200px" id="bout1">
                     <button class="btn btn-outline-dark btn-sm border-0 rounded-custom" (click)="previousImage(i)">
                         <i class="fas fa-chevron-left"></i>
                     </button>
@@ -18,7 +18,7 @@
                         </span>
                     </div>
 
-                    <button class="btn btn-outline-dark btn-sm border-0 rounded-custom" (click)="nextImage(i)">
+                    <button class="btn btn-outline-dark btn-sm border-0 rounded-custom" (click)="nextImage(i)" id="bout2">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
@@ -31,14 +31,14 @@
             <!-- Détails du produit -->
             <h5 class="card2-title">{{ product.title }}</h5>
             <p class="card2-text">{{ product.description }}</p>
-            <h6 class="card2-price">Prix : {{ product.price | currency:'EUR' }}</h6>
+            <h6 class="card2-price">{{ product.price | currency:'$' }}</h6>
 
             <!-- Trait horizontal sous le prix -->
             <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-top: 30px;width: 490px;"></div>
 
             <!-- Sélection de la quantité -->
             <div class="form-group mt-4">
-                <label class="me-2 custom-quantity-text">Quantité :</label>
+                <label class="me-2 custom-quantity-text">Quanity </label>
                 <div class="input-group mt-3" style="width: 150px; height: 60px; border-radius: 10px; border: 1px solid rgb(224, 216, 216); background-color: #fff;">
                     <!-- Bouton - -->
                     <button class="btn btn-outline-secondary btn-sm rounded-custom" (click)="changeQuantity(i, -1)" type="button" style="border: none; padding: 0.5rem; background: none; font-size: 24px; display: flex; align-items: center;">

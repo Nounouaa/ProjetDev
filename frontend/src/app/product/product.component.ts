@@ -23,7 +23,9 @@ export class ProductComponent {
       quantity: 1,
       currentImageIndex: 0
     },
+    
   ];
+  
 
   // Changer l'image vers le modèle suivant
   nextImage(index: number) {

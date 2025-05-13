@@ -110,12 +110,6 @@
     position: relative;
 }
 
-.card2-img-top {
-    width: 200%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
 .position-absolute {
     z-index: 10;
 }
@@ -126,35 +120,14 @@
     padding: 5px 10px;
 }
 
-.image-indicator span {
-    display: inline-block;
-    width: 12px;
-    /* Taille des points */
-    height: 12px;
-    /* Taille des points */
-    background-color: #ccc;
-    /* Couleur des points inactifs */
-    border-radius: 50%;
-    /* Rendre les points circulaires */
-    margin: 0 5px;
-    /* Espacement entre les points */
-}
-
-.image-indicator span.active {
-    background-color: rgba(32, 27, 33, 1);
-    /* Couleur du point actif */
-}
-
 button.btn-outline-dark {
     border: none;
     /* Supprimer la bordure */
     box-shadow: none;
-    /* Supprimer l'ombre de la bordure */
 }
 
 button.btn-outline-dark:focus {
     outline: none;
-    /* Supprimer le focus (contour bleu lorsque le bouton est sélectionné) */
 }
 
 .rounded-custom {
