@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';  
+import { ProductService } from '../services/product.service';
+import { Product } from '../models/product';
+
 
 @Component({
   selector: 'app-product',
@@ -9,53 +12,45 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 })
 export class ProductComponent {
+  products: Product[] = [];
+  currentIndex: number = 0;
+  quantity = 1;
   
-  products = [
-    {
-      title: 'adidas',
-      images: [
-        'assets/img/rect6.png',
-        'assets/img/rect2.png',
-        'assets/img/rect3.png'
-      ],
-      description: 'DAILY 3.0 SHOES',
-      price: 98.99,
-      quantity: 1,
-      currentImageIndex: 0
-    },
-    
-  ];
+  constructor(private productService: ProductService) {}
   
+  ngOnInit(): void {
+    // Récupère les produits depuis le service et initialise la liste
+    this.productService.getProducts().subscribe((products: Product[]) => {
+      this.products = products;
+    });
+  }
+  
+  // Getter pour obtenir le produit actuellement affiché
+  get currentProduct(): Product | undefined {
+    return this.products[this.currentIndex];
+  }
+  
+  // Affiche le produit suivant (ou revient au premier si on est à la fin)
+  nextProduct(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.products.length;
+  }
+  
+  // Affiche le produit précédent (ou revient au dernier si on est au début)
+  previousProduct(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.products.length) % this.products.length;
+  }
+  incrementQuantity() {
+    this.quantity++;
+  }
 
-  // Changer l'image vers le modèle suivant
-  nextImage(index: number) {
-    let product = this.products[index];
-    if (product.currentImageIndex < product.images.length - 1) {
-      product.currentImageIndex++;
-    } else {
-      product.currentImageIndex = 0; // Revenir à la première image
+  decrementQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
     }
   }
 
-  // Changer l'image vers le modèle précédent
-  previousImage(index: number) {
-    let product = this.products[index];
-    if (product.currentImageIndex > 0) {
-      product.currentImageIndex--;
-    } else {
-      product.currentImageIndex = product.images.length - 1; // Aller à la dernière image
-    }
-  }
-
-  // Fonction pour changer la quantité
-  changeQuantity(index: number, amount: number) {
-    if (this.products[index].quantity + amount >= 1) {
-      this.products[index].quantity += amount;
-    }
-  }
-
-  // Ajouter au panier
   addToCart(product: any) {
-    console.log(`Ajouté au panier: ${product.quantity} x ${product.title}`);
+    alert(`${product.title} ajouté au panier ! Quantité : ${this.quantity}`);
   }
+  
 }

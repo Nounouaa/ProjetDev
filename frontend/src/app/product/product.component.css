@@ -1,21 +1,27 @@
 .card2-img-top {
-    width: 200%;
-    max-height: 300px;
+    width: 125%;
+    max-height: 390px;
     object-fit: cover;
+    padding-top: 4%;
 }
 
 .image-indicator span {
     display: inline-block;
-    width: 12px;
+    width: 10px;
     /* Taille des points */
     height: 12px;
     /* Taille des points */
     background-color: #ccc;
     /* Couleur des points inactifs */
     border-radius: 50%;
-    /* Rendre les points circulaires */
-    margin: 0 5px;
-    /* Espacement entre les points */
+}
+
+#bout1 {
+    margin-right: -25%;
+}
+
+#bout2 {
+    margin-left: 10%;
 }
 
 .image-indicator span.active {
@@ -26,17 +32,25 @@
 @media (max-width: 767px) {
     /* Contrôle de l'espacement entre les boutons de navigation */
     .scroll-controls {
-        gap: 40px;
+        gap: 300px;
         /* Réduit l'espace entre les boutons de navigation */
     }
     /* Styles pour les boutons de navigation */
     .scroll-controls button {
+        gap: 150px;
         width: 36px;
         /* Taille du bouton */
         height: 36px;
         /* Taille du bouton */
         font-size: 14px;
         /* Taille de la police */
+    }
+    #bout1 {
+        margin-right: 1%;
+    }
+    #bout2 {
+        gap: 150%;
+        margin-left: -15%;
     }
     /* Styles pour l'indicateur de l'image */
     .image-indicator span {

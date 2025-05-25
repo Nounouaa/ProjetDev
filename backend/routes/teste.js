@@ -1,13 +1,20 @@
 const express = require('express');
-const router = express.Router(); // Utilisation correcte de Router()
+const router = express.Router();
 
-// Définition de la route GET "/"
-router.get('/', (req, res) => {
+/**
+ * @swagger
+ * /teste :
+ *    get : 
+ *      summary : teste de l\'api
+ *      responses : 
+ *          200 : 
+ *              description : api fonctionne
+ * 
+ * 
+ */
+
+router.get('/teste', (req, res) => {
     res.json({ message: 'API fonctionne !' });
 });
 
-
-
-
-// Exportation du routeur
 module.exports = router;

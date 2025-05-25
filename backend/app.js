@@ -1,12 +1,17 @@
 const express = require('express');
+const cors = require('cors');
+const { swaggerUi, swaggerSpec } = require('./swagger');
+const routerApi = require('./routes/teste');
+const routerProduct = require('./routes/product');
+
 const app = express();
-const routerApi = require('./routes/teste')
 
+app.use(cors());
+app.use(express.json());
 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-
-// Routes de test
-app.get('/', routerApi);
-
+app.use('/', routerApi);
+app.get('/products', routerProduct);
 
 module.exports = app;

@@ -1,26 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-const app = require('./app');
 const db = require('./models');
 
-
+const app = require('./app');
+const port = process.env.PORT || 3001;
 
 db.sequelize.sync().then(() => {
-    console.log('Connexion reussi');
+    console.log('Connexion réussie à la base de données');
     app.listen(port, () => {
         console.log(`Serveur backend démarré sur http://localhost:${port}`);
     });
-})
-
-
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-const port = process.env.PORT || 3001;
-
-
-
-
-// Lancer le serveur
+}).catch((err) => {
+    console.error('Erreur de connexion à la base de données :', err);
+});
